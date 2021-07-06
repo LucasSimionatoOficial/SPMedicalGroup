@@ -1,0 +1,372 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SP_Medical_Group.WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:SP_Medical_Group.WebApi.Controllers.ClinicasController.Get">
+            <summary>
+            Lista clinicas
+            </summary>
+            <returns>StatusCode 200 - Ok clinicas</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Controllers.ClinicasController.Update(System.Int32,SP_Medical_Group.WebApi.Domains.Clinica)">
+            <summary>
+            Atualiza clinica
+            </summary>
+            <param name="id">id da clinica</param>
+            <param name="clinica">clinica</param>
+            <returns>StatusCode 200 - ok</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Controllers.ClinicasController.Post(SP_Medical_Group.WebApi.Domains.Clinica)">
+            <summary>
+            Cria clinica
+            </summary>
+            <param name="clinica">clinica</param>
+            <returns>StatusCode 201 - Created</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Controllers.ConsultasController.Post(SP_Medical_Group.WebApi.Domains.Consultum)">
+            <summary>
+            cria consulta
+            </summary>
+            <param name="consulta">consulta</param>
+            <returns>StatusCode 201 - Created</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Controllers.ConsultasController.Update(System.Int32,SP_Medical_Group.WebApi.Domains.Consultum)">
+            <summary>
+            atualiza consulta
+            </summary>
+            <param name="id">id da consulta</param>
+            <param name="consulta">consulta</param>
+            <returns>StatusCode 200- Ok</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Controllers.ConsultasController.UpdateDescricao(System.Int32,SP_Medical_Group.WebApi.Domains.Consultum)">
+            <summary>
+            Atualiza descricao da consulta
+            </summary>
+            <param name="id">id da consulta</param>
+            <param name="consulta">consulta</param>
+            <returns>StatusCode 200 - Ok</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Controllers.ConsultasController.GetConsultas">
+            <summary>
+            Lista consultas de um medico logado
+            </summary>
+            <returns>StatusCode 200 - Ok consultas</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Controllers.ConsultasController.Get">
+            <summary>
+            Lista consultas de um paciente logado
+            </summary>
+            <returns>StatusCode 200 - Ok consultas</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Controllers.LoginController.Login(SP_Medical_Group.WebApi.Domains.Usuario)">
+            <summary>
+            Faz login
+            </summary>
+            <param name="usuario">usuario</param>
+            <returns>StatusCode 200 - Ok jwt</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Controllers.UsuariosController.Post(SP_Medical_Group.WebApi.Domains.Usuario)">
+            <summary>
+            Cadastra usuario
+            </summary>
+            <param name="usuario">usuario</param>
+            <returns>StatusCode 201 - Created</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IClinicaRepository.Criar(SP_Medical_Group.WebApi.Domains.Clinica)">
+            <summary>
+            Cria clinica
+            </summary>
+            <param name="clinica">clinica</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IClinicaRepository.Listar">
+            <summary>
+            Lista clinicas
+            </summary>
+            <returns>lista de clinicas</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IClinicaRepository.Atualizar(System.Int32,SP_Medical_Group.WebApi.Domains.Clinica)">
+            <summary>
+            Atualiza clinica
+            </summary>
+            <param name="id">id da clinica</param>
+            <param name="clinica">clinica</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IClinicaRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta clinica
+            </summary>
+            <param name="id">id da clinica</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IClinicaRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca clinica pelo id
+            </summary>
+            <param name="id">id da clinica</param>
+            <returns>clinica</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IConsultumRepository.Criar(SP_Medical_Group.WebApi.Domains.Consultum)">
+            <summary>
+            Cria consulta
+            </summary>
+            <param name="consulta">consulta</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IConsultumRepository.Listar">
+            <summary>
+            Lista consulta
+            </summary>
+            <returns>Lista de consultas</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IConsultumRepository.Atualizar(System.Int32,SP_Medical_Group.WebApi.Domains.Consultum)">
+            <summary>
+            Atualiza consulta
+            </summary>
+            <param name="id">id da consulta</param>
+            <param name="consulta">consulta</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IConsultumRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta consulta
+            </summary>
+            <param name="id">id da consulta</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IConsultumRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca consulta pelo id
+            </summary>
+            <param name="id">id da consulta</param>
+            <returns>consulta</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IMedicoRepository.Criar(SP_Medical_Group.WebApi.Domains.Medico)">
+            <summary>
+            Cria medico
+            </summary>
+            <param name="medico">medico</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IMedicoRepository.Listar">
+            <summary>
+            Lista medicos
+            </summary>
+            <returns>medicos</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IMedicoRepository.Atualizar(SP_Medical_Group.WebApi.Domains.Medico,System.Int32)">
+            <summary>
+            Atualiza medico
+            </summary>
+            <param name="medico">medico</param>
+            <param name="id">id</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IMedicoRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta medico
+            </summary>
+            <param name="id">id</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IPacienteRepository.Criar(SP_Medical_Group.WebApi.Domains.Paciente)">
+            <summary>
+            Cria paciente
+            </summary>
+            <param name="paciente">paciente</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IPacienteRepository.Listar">
+            <summary>
+            Lista pacientes
+            </summary>
+            <returns>pacientes</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IPacienteRepository.Atualizar(SP_Medical_Group.WebApi.Domains.Paciente,System.Int32)">
+            <summary>
+            Atualiza pacientes
+            </summary>
+            <param name="paciente">paciente</param>
+            <param name="id">id</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IPacienteRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta paciente
+            </summary>
+            <param name="id">id</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.ITipoUsuarioRepository.Criar(SP_Medical_Group.WebApi.Domains.TipoUsuario)">
+            <summary>
+            Cria um tipo de usuario
+            </summary>
+            <param name="tipoUsuario">tipo de usuario</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.ITipoUsuarioRepository.Listar">
+            <summary>
+            Lista tipos de usuarios
+            </summary>
+            <returns>lista de tipos de usuario</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.ITipoUsuarioRepository.Editar(System.Int32,SP_Medical_Group.WebApi.Domains.TipoUsuario)">
+            <summary>
+            Edita usuario
+            </summary>
+            <param name="id">id do tipo de usuario</param>
+            <param name="tipoUsuario">tipo de usuario</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.ITipoUsuarioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um tipo de usuario
+            </summary>
+            <param name="id">id do tipo de usuario</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.ITipoUsuarioRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca tipo de usuario pelo id
+            </summary>
+            <param name="id">id do tipo de usuario</param>
+            <returns>tipo de usuario</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IUsuarioRepository.BuscarEmailSenha(System.String,System.String)">
+            <summary>
+            Busca usuario atraves do emaile senha
+            </summary>
+            <param name="email">email</param>
+            <param name="senha">senha</param>
+            <returns>Usuario</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IUsuarioRepository.Cadastrar(SP_Medical_Group.WebApi.Domains.Usuario)">
+            <summary>
+            Cadastra um novo usuario
+            </summary>
+            <param name="usuario">usuario</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IUsuarioRepository.Listar">
+            <summary>
+            Lista usuarios
+            </summary>
+            <returns>Lista de usuarios</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IUsuarioRepository.Atualizar(System.Int32,SP_Medical_Group.WebApi.Domains.Usuario)">
+            <summary>
+            Atualiza Usuario
+            </summary>
+            <param name="id">id do usuario</param>
+            <param name="usuario">usuario</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Interfaces.IUsuarioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta usuario
+            </summary>
+            <param name="id">id do usuario</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.MedicoRepository.Atualizar(SP_Medical_Group.WebApi.Domains.Medico,System.Int32)">
+            <summary>
+            Atualiza medico
+            </summary>
+            <param name="medico">medico</param>
+            <param name="id">id</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.MedicoRepository.Criar(SP_Medical_Group.WebApi.Domains.Medico)">
+            <summary>
+            Cria medico
+            </summary>
+            <param name="medico">medico</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.MedicoRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta medico
+            </summary>
+            <param name="id">id</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.MedicoRepository.Listar">
+            <summary>
+            Lista medicos
+            </summary>
+            <returns>medicos</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.PacienteRepository.Atualizar(SP_Medical_Group.WebApi.Domains.Paciente,System.Int32)">
+            <summary>
+            Atualiza pacientes
+            </summary>
+            <param name="paciente">paciente</param>
+            <param name="id">id</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.PacienteRepository.Criar(SP_Medical_Group.WebApi.Domains.Paciente)">
+            <summary>
+            Cria paciente
+            </summary>
+            <param name="paciente">paciente</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.PacienteRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta paciente
+            </summary>
+            <param name="id">id</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.PacienteRepository.Listar">
+            <summary>
+            Lista pacientes
+            </summary>
+            <returns>pacientes</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.TipoUsuarioRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca tipo de usuario pelo id
+            </summary>
+            <param name="id">id do tipo de usuario</param>
+            <returns>tipo de usuario</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.TipoUsuarioRepository.Criar(SP_Medical_Group.WebApi.Domains.TipoUsuario)">
+            <summary>
+            Cria um tipo de usuario
+            </summary>
+            <param name="tipoUsuario">tipo de usuario</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.TipoUsuarioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um tipo de usuario
+            </summary>
+            <param name="id">id do tipo de usuario</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.TipoUsuarioRepository.Editar(System.Int32,SP_Medical_Group.WebApi.Domains.TipoUsuario)">
+            <summary>
+            Edita usuario
+            </summary>
+            <param name="id">id do tipo de usuario</param>
+            <param name="tipoUsuario">tipo de usuario</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.TipoUsuarioRepository.Listar">
+            <summary>
+            Lista tipos de usuarios
+            </summary>
+            <returns>lista de tipos de usuario</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.UsuarioRepository.Atualizar(System.Int32,SP_Medical_Group.WebApi.Domains.Usuario)">
+            <summary>
+            Atualiza Usuario
+            </summary>
+            <param name="id">id do usuario</param>
+            <param name="usuario">usuario</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.UsuarioRepository.BuscarEmailSenha(System.String,System.String)">
+            <summary>
+            Busca usuario atraves do emaile senha
+            </summary>
+            <param name="email">email</param>
+            <param name="senha">senha</param>
+            <returns>Usuario</returns>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.UsuarioRepository.Cadastrar(SP_Medical_Group.WebApi.Domains.Usuario)">
+            <summary>
+            Cadastra um novo usuario
+            </summary>
+            <param name="usuario">usuario</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.UsuarioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta usuario
+            </summary>
+            <param name="id">id do usuario</param>
+        </member>
+        <member name="M:SP_Medical_Group.WebApi.Repositories.UsuarioRepository.Listar">
+            <summary>
+            Lista usuarios
+            </summary>
+            <returns>Lista de usuarios</returns>
+        </member>
+    </members>
+</doc>

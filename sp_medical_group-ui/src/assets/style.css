@@ -1,0 +1,173 @@
+/* @import url("./fonts/Lato/Lato-Black.ttf");*/
+@font-face{
+    font-family: "Lato-Regular";
+    src: url("./fonts/Lato/Lato-Regular.ttf");
+}
+
+@font-face{
+    font-family: "Lato-Light";
+    src: url("./fonts/Lato/Lato-Light.ttf");
+    
+}
+@font-face{
+    font-family: "Lato-Italic";
+    src: url("./fonts/Lato/Lato-Italic.ttf");
+
+}
+@font-face{
+    font-family: "Lato-BoldItalic";
+    src: url("./fonts/Lato/Lato-BoldItalic.ttf");
+}
+@font-face{
+    font-family: "Lato-Bold";
+    src: url("./fonts/Lato/Lato-Bold.ttf");
+
+}
+@font-face{
+    font-family: "Lato-Black";
+    src: url("./fonts/Lato/Lato-Black.ttf");
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family : "Lato-Regular", sans-serif;
+}
+
+body{
+    background-color: cyan;
+}
+
+main{
+    display: flex;
+    justify-content: center
+}
+
+.content{
+    width: 1000px
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex a{
+    cursor: pointer;
+}
+
+h1{
+    margin : 20px;
+}
+
+h2{
+    margin: 20px 
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-right: 1px solid black;
+    margin-bottom: 20px;
+}
+
+#administrador th, #administrador td{
+    width: calc(100% / 5);
+}
+
+th, td{
+    border: 1px solid black
+}
+
+
+tr{
+    background-color : #177CB3
+}
+
+tr:nth-child(even){
+    background-color: #1EA0E6
+}
+
+thead tr{
+    background-color: blue;
+}
+.none{
+    display: none
+}
+
+input, button, select{
+    outline: none;
+    background-color: #1EA0E6;
+    border: 0;
+    border-bottom: 1px solid blue;
+    /* color: black; */
+}
+
+input::placeholder{
+    color: black
+}
+
+#input{
+    width: 100%
+}
+
+button{
+    border: 1px solid blue;
+    background-color: blue;
+    height: 40px;
+    width: 80px;
+    font-size: 24px;
+    font-weight: 550
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+    background-color: #1EA0E6;
+    height: 300px;
+    border-radius: 30px;
+    border: 1px solid black;
+    margin: 0 calc((100% - 600px) / 2);
+    font-size: 22px;
+}
+.form div{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 10px 0
+}
+
+.form input, .form select{
+    font-size: 20px;
+}
+
+.inform{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 22px;
+}
+
+.error{
+    color: red;
+}
+
+.buttonEditar{
+    height: unset;
+    width: unset;
+    color: unset;
+    border: 1px solid black;
+    /* background-color: unset; */
+    font-size: 16px;
+    margin: 2px;
+}
+
+form input{
+    width: 200px;
+}
